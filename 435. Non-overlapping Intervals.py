@@ -2,7 +2,7 @@
 
 
 class Solution:
-    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+    def eraseOverlapIntervals(self, intervals: list[list[int]]) -> int:
         intervals.sort()
         stack = []
         count = 0
