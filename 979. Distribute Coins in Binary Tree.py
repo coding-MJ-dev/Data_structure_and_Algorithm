@@ -7,6 +7,9 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from typing import Optional
+
+
 class Solution:
     def distributeCoins(self, root: Optional[TreeNode]) -> int:
         ans = 0
