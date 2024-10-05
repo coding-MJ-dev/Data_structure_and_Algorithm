@@ -1,5 +1,9 @@
 // 215. Kth Largest Element in an Array
 
+#include <queue>
+#include <algorithm>
+#include <vector>
+
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
