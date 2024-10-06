@@ -21,7 +21,5 @@ public:
         }
         dfs(sr, sc, to_color, color, rows, cols, image);
         return image;
-
-
     }
 };
