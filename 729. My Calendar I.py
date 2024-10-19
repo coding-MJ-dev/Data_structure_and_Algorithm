@@ -1,12 +1,14 @@
 # 729. My Calendar I
 
+import bisect
+
 
 class MyCalendar:
     def __init__(self):
         self.cal = []
 
     def book(self, start: int, end: int) -> bool:
-        ind = bisect_left(self.cal, [start, end])
+        ind = bisect.bisect_left(self.cal, [start, end])
         if (ind > 0 and start < self.cal[ind - 1][1]) or (
             ind <= len(self.cal) - 1 and end > self.cal[ind][0]
         ):
