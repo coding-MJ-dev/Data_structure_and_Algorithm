@@ -2,7 +2,6 @@
 
 
 
-
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         ans = 0
