@@ -1,6 +1,7 @@
 # 395. Longest Substring with At Least K Repeating Characters
 
 
+
 class Solution:
     def longestSubstring(self, s: str, k: int) -> int:
         if not s:
