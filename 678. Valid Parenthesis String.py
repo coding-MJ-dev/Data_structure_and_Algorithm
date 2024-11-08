@@ -17,10 +17,10 @@ class Solution:
                 else:
                     return False
             
-        while stack:
-            if not special or stack[-1] > special[-1]:
+        while stack and special:
+            if stack[-1] > special[-1]:
                 return False
             stack.pop()
             special.pop()
         
-        return True
+        return len(stack) == 0
