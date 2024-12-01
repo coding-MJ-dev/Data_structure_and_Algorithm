@@ -6,6 +6,8 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
 class Solution:
     def minimumFlips(self, root: Optional[TreeNode], result: bool) -> int:
         def dfs(node): # true, false
