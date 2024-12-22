@@ -8,18 +8,34 @@ class Solution {
 public:
     int firstBadVersion(int n) {
         int l = 1, r = n;
-        int ans = n;
-        while (l <= r) {
-            int m = l + (r - l) / 2;
-            bool isBad = isBadVersion(m);
-
-            if (isBad) {
-                ans = min(ans, m);
-                r = m - 1;
+        while (l < r) {
+            int m = l + (r-l) / 2;
+            if (isBadVersion(m)) {
+                r = m;
             } else {
                 l = m + 1;
             }
         }
-        return ans;
+        return l;
     }
 };
+
+// class Solution {
+// public:
+//     int firstBadVersion(int n) {
+//         int l = 1, r = n;
+//         int ans = n;
+//         while (l <= r) {
+//             int m = l + (r - l) / 2;
+//             bool isBad = isBadVersion(m);
+
+//             if (isBad) {
+//                 ans = min(ans, m);
+//                 r = m - 1;
+//             } else {
+//                 l = m + 1;
+//             }
+//         }
+//         return ans;
+//     }
+// };
