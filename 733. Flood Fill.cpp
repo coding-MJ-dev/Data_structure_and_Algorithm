@@ -1,25 +1,66 @@
 // 733. Flood Fill
 
+
 class Solution {
-private:
-    void dfs(int r, int c, int from_color, int to_color, int rows, int cols, vector<vector<int>>& image) {
-        if (r >= 0 && c >= 0 && r < rows && c < cols && image[r][c]==from_color) {
-            image[r][c] = to_color;
-            dfs(r+1, c, from_color, to_color, rows, cols, image);
-            dfs(r-1, c, from_color, to_color, rows, cols, image);
-            dfs(r, c+1, from_color, to_color, rows, cols, image);
-            dfs(r, c-1, from_color, to_color, rows, cols, image);
-        }
+public:
+    void dfs(int i, int j, int rows, int cols, int origin, int color, vector<vector<int>>& image) {
+        if (i < 0 || i == rows || j < 0 || j == cols || image[i][j] != origin) return;
+
+        image[i][j] = color;
+        dfs(i+1, j, rows, cols, origin, color, image);
+        dfs(i-1, j, rows, cols, origin, color, image);
+        dfs(i, j+1, rows, cols, origin, color, image);
+        dfs(i, j-1, rows, cols, origin, color, image);
     }
 
-public:
     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
         int rows = image.size(), cols = image[0].size();
-        int to_color = image[sr][sc];
-        if (to_color == color) {
-            return image;
+        int origin = image[sr][sc];
+        if (origin != color) {
+            dfs(sr, sc, rows, cols, origin, color, image);
         }
-        dfs(sr, sc, to_color, color, rows, cols, image);
+        
         return image;
     }
 };
+
+
+//// bfs
+// #include <vector>
+// #include <queue>
+// using namespace std;
+
+// class Solution {
+// public:
+//     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) {
+//         int currentColor = image[sr][sc];
+//         if (currentColor == color) return image; // Avoid processing if the color is already the same
+
+//         int rows = image.size();
+//         int cols = image[0].size();
+
+//         // Use an iterative BFS approach to avoid stack overflow with deep recursion
+//         queue<pair<int, int>> q;
+//         q.push({sr, sc});
+
+//         while (!q.empty()) {
+//             auto [x, y] = q.front();
+//             q.pop();
+
+//             if (x < 0 || x >= rows || y < 0 || y >= cols || image[x][y] != currentColor) {
+//                 continue;
+//             }
+
+//             // Update the color of the current pixel
+//             image[x][y] = color;
+
+//             // Push adjacent pixels onto the queue
+//             q.push({x + 1, y}); // Down
+//             q.push({x - 1, y}); // Up
+//             q.push({x, y + 1}); // Right
+//             q.push({x, y - 1}); // Left
+//         }
+
+//         return image;
+//     }
+// };
