@@ -1,6 +1,9 @@
 // 14. Longest Common Prefix
 
 
+#include <string>
+#include <vector>
+
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
