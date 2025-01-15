@@ -1,10 +1,20 @@
 # 376. Wiggle Subsequence
 
-
 class Solution:
     def wiggleMaxLength(self, nums: List[int]) -> int:
+        # O(n), O(1)
+        if not nums:
+            return 0
+            
+        last = 0
+        ans = 1
 
-
+        for i in range(1, len(nums)):
+            if (nums[i] - nums[i-1] > 0 and last <= 0) or (nums[i] - nums[i-1] < 0 and last >= 0):
+                ans += 1
+                last = nums[i] - nums[i-1]
+        
+        return ans
 
 
 
