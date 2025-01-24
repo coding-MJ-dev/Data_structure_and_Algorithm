@@ -1,14 +1,26 @@
 {
-    "files.associations": {
-        "vector": "cpp",
-        "string": "cpp",
-        "format": "cpp",
-        "array": "cpp",
-        "deque": "cpp",
-        "unordered_map": "cpp",
-        "string_view": "cpp",
-        "initializer_list": "cpp",
-        "span": "cpp",
-        "text_encoding": "cpp"
-    }
+  "C_Cpp.default.compilerPath": "/opt/homebrew/opt/llvm/bin/clang++", // Homebrew LLVM Clang 경로
+  "C_Cpp.default.includePath": [
+    "/opt/homebrew/opt/llvm/include",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+    "/Library/Developer/CommandLineTools/usr/include/c++/v1"
+  ],
+  "files.associations": {
+    "ostream": "cpp",
+    "iostream": "cpp",
+    "array": "cpp",
+    "atomic": "cpp",
+    "*.tcc": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "algorithm": "cpp",
+    "unordered_map": "cpp",
+    "type_traits": "cpp",
+    "functional": "cpp",
+    "tuple": "cpp"
+  },
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64", // M1 Mac용 IntelliSense
+  "C_Cpp.errorSquiggles": "enabled"
 }

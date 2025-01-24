@@ -1,3 +1,12 @@
 cheeseburge*
 meta*
-.vscode
+.vscode\*
+.DS_Store
+c_cpp_properties.json
+launch.json
+settings.json
+tasks.json
+
+00. How to use personal test case.py
+.vscode/settings.json
+.vscode/c_cpp_properties.json

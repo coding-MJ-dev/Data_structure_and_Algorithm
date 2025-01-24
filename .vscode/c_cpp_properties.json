@@ -1,33 +1,30 @@
 {
     "configurations": [
         {
-            "name": "GCC",
-            "includePath": ["${workspaceFolder}/**"],
-            "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-            "windowsSdkVersion": "10.0.22000.0",
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64"
-        },
-        {
-            "name": "Win32",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Users/mwjan/.platformio/packages/framework-arduino-avr/**",
-                "C:/msys64/include"
+                "/opt/homebrew/opt/llvm/include",
+                "/opt/homebrew/Cellar/llvm/19.1.6/include/c++/v1",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "windowsSdkVersion": "10.0.22621.0",
-            "cStandard": "gnu11",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe"
-        }
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "compilerPath": "/opt/homebrew/opt/llvm/bin/clang++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "macos-clang-arm64",
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
     ],
     "version": 4
 }
