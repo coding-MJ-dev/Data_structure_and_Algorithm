@@ -24,7 +24,8 @@
     "__split_buffer": "cpp",
     "deque": "cpp",
     "initializer_list": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "iosfwd": "cpp"
   },
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.cStandard": "c17",
