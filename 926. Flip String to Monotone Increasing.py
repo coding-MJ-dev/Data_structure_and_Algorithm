@@ -11,3 +11,15 @@ class Solution:
         return ans
 
 
+# 
+        # left_ones = 0
+        # right_zeros = s.count("0")
+        # ans = right_zeros
+        # for c in s:
+        #     if c == "0":
+        #         right_zeros -= 1
+        #     else:
+        #         left_ones += 1
+        #     ans = min(ans, left_ones + right_zeros)
+        
+        # return ans
