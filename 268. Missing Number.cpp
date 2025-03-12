@@ -1,4 +1,7 @@
 // 268. Missing Number
+#include <vector>
+#include <algorithm>
+using namespace std;
 
 class Solution {
 public:
