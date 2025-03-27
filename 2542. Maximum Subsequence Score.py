@@ -16,3 +16,19 @@ class Solution:
                 curSum -= val
         
         return ans
+
+
+
+        # pairs = [(x,y) for x, y in zip(nums1, nums2)]
+        # pairs.sort(key = lambda x: x[1]* -1)
+        # hp = []
+        # cur, ans = 0, 0
+        # for i in range(len(pairs)):
+        #     x, y = pairs[i]
+        #     cur += x
+        #     heappush(hp, x)
+        #     if len(hp) == k:
+        #         ans = max(ans, cur*y)
+        #         cur -= heappop(hp)
+
+        # return ans
