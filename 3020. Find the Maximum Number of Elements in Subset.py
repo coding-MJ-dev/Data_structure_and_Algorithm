@@ -1,6 +1,9 @@
 # 3020. Find the Maximum Number of Elements in Subset
 
 
+from collections import Counter
+
+
 class Solution:
     def maximumLength(self, nums: List[int]) -> int:
         count = Counter(nums)
