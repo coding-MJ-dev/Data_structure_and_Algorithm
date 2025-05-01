@@ -1,5 +1,9 @@
 # 332. Reconstruct Itinerary
 
+from collections import defaultdict
+from typing import List
+
+
 class Solution:
     def findItinerary(self, tickets: List[List[str]]) -> List[str]:
         adj = defaultdict(list)
