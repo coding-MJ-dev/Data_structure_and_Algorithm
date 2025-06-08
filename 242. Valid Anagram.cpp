@@ -1,20 +1,51 @@
 // 242. Valid Anagram
-#include <unordered_map>
+// #include <unordered_map>
 #include <string>
-class Solution {
-public:
-    bool isAnagram(string s, string t) {
-        if (s.length() != t.length()) return false;
-        std::unordered_map<char,int> mp;
 
-        for (char& c: s) mp[c]++;
-        for (char& c: t) {
-            if (mp[c] == 0) return false;
-            mp[c]--;
+// Removed invalid namespace declaration
+
+class Solution {
+    public:
+        bool isAnagram(std::string s, std::string t) {
+            if (s.size() != t.size()) {
+                return false;
+            }
+            int arr[26] = {0};
+    
+            for (int i = 0; i < s.size(); i++) {
+                char ch = s[i];
+                arr[ch - 'a']++;
+            }
+    
+            for (int j = 0; j < t.size(); j++) {
+                char ch = t[j];
+                arr[ch - 'a']--;
+            }
+    
+            for (int k = 0; k < 26; k++) {
+                if (arr[k] != 0) return false;
+            }
+    
+            return true;
+    
         }
-        return true;
-    }
-};
+    };
+
+
+// class Solution {
+// public:
+//     bool isAnagram(std::string s, std::string t) {
+//         if (s.length() != t.length()) return false;
+//         std::unordered_map<char,int> mp;
+
+//         for (char& c: s) mp[c]++;
+//         for (char& c: t) {
+//             if (mp[c] == 0) return false;
+//             mp[c]--;
+//         }
+//         return true;
+//     }
+// };
 
 
 // class Solution {
